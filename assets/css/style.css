@@ -1,0 +1,83 @@
+body{
+	text-align: center;
+	font-family: 'Chewy', cursive;
+	font-size: 30px;
+}
+
+.game-board{
+	/*background-image: url(../../assets/images/sativa.png);*/
+	background-color: lightblue;
+	height: 400px;
+	margin-top: 250px;
+}
+
+.blank{
+	background-image: url(../../assets/images/square.png);
+}
+
+.underLetter{
+	background-image: url(../../assets/images/underLetter.png);
+}
+
+.letters{
+	display: inline-block;
+	width: 51px;
+	height: 45px;
+	background-color: lightblue;
+	border: 1px solid black;
+	margin:3px;
+}
+
+.hiden{
+	visibility: hidden;
+}
+
+.centered{
+	margin-top: 15px;
+}
+
+.centered-letters{
+	margin-top: 30px;
+}
+
+
+.block{
+	display: inline-block;
+	width: 51px;
+	height: 45px;
+	background-size: cover;
+	border: 0px;
+	margin-left: -5px;
+	padding: 4px;
+}
+
+.cat{
+	background-image: url(../../assets/images/animals/cat.png);
+	display: inline-block;
+	width: 90px;
+	height: 60px;
+	background-size: cover;
+}
+
+.remain, .scoreField{
+	margin-top: 30px;
+	margin-left: 10px;
+}
+
+.container{
+	background-image: url(../../assets/images/back.png);
+	padding-bottom: 30px;
+	padding-top: 30px;
+	position: fixed;
+	top:30%;
+	left: 15%;
+}
+
+#lost{
+	color: red;
+}
+
+.no-display{
+	display: none;
+}
+

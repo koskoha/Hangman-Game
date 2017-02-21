@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
 	<meta charset="utf-8">
-	<title>Hangman</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Word guessing game</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/letters.css">
+	<script src="assets/js/javascript.js"></script>
 </head>
-<body>
-	<script src = "assets/js/javascript.js"></script>
+<body onclick="start(0)">
+	<div class="container">
+<!-- 		<div class="row">
+			<div class="col-md-4" id="picture"> artist</div>
+			<div class="col-md-8 text-center" id="info"> artist info</div>
+		</div> -->
+		<div class="row">
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-12 centered">
+
+						<!-- word line -->
+						<div id="word-line">
+							<span class = "" id="press_and_remove"> <h1">Click to start</h1></span>
+						</div>
+						<div id="restart" class="no-display">
+							<span id="lost"> <h1">Sorry, but You LOST</h1></span> 
+							<br><br><br>
+							<span onclick = "restart()">Click me to restart</span>
+						</div>
+
+					</div>
+
+					<!--  Letters    -->
+
+					<div class="row">
+						<div class="col-md-12 centered-letters">
+							<div class="row" id="alphabetFirst">
+
+							</div>
+							<div class="row" id="alphabetSecond">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="remain">
+					Number of remaining guesses:    <span id="lives">5</span>
+				</div>
+				<div class="scoreField">
+					You score:    <span id="score">0</span>
+				</div>
+			</div>
+			
+		</div>
+	</div>
 
 </body>
 </html>
