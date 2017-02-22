@@ -40,28 +40,24 @@ body{
 	margin-top: 30px;
 }
 
+.row{
+	margin-right: -10px;
+    margin-left: -10px;
+}
+
 
 .block{
 	display: inline-block;
-	width: 51px;
-	height: 45px;
+	width: 46px;
+	height: 40px;
 	background-size: cover;
 	border: 0px;
 	margin-left: -5px;
 	padding: 4px;
 }
 
-.cat{
-	background-image: url(../../assets/images/animals/cat.png);
-	display: inline-block;
-	width: 90px;
-	height: 60px;
-	background-size: cover;
-}
-
 .remain, .scoreField{
 	margin-top: 30px;
-	margin-left: 10px;
 }
 
 .container{
@@ -69,7 +65,7 @@ body{
 	padding-bottom: 30px;
 	padding-top: 30px;
 	position: fixed;
-	top:30%;
+	top:15%;
 	left: 15%;
 }
 
@@ -79,5 +75,19 @@ body{
 
 .no-display{
 	display: none;
+}
+
+#info{
+	font-size: 23px;
+	color: blue;
+}
+
+#infoPanel{
+	margin-bottom: 30px;
+}
+
+#photo{
+	width: 200px;
+	height: auto;
 }
 
