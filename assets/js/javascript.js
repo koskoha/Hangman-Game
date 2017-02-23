@@ -31,7 +31,7 @@ artists = {
 }*/
 
 player = {
-	lives:5,
+	lives:10,
 	score:0,
 	gWord:"",
 	guessChar: 0,
