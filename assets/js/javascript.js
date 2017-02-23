@@ -39,10 +39,10 @@ player = {
 
 	checkSpelling:function(key){
 		if (this.gWord.includes(" ")) {
-			this.gWord = this.gWord.replace(" ","0");
+			this.gWord = this.gWord.replace(" ","1");
 			this.guessChar++;
 		}else if (this.gWord.includes("-")) {
-			this.gWord = this.gWord.replace("-","0");
+			this.gWord = this.gWord.replace("-","1");
 			this.guessChar++;
 		}
 		for (var i = this.gWord.length - 1; i >= 0; i--) {
