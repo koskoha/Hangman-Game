@@ -71,6 +71,7 @@ function logic(key){
 		if(key !== 0){
 			player.lives--;
 			if (player.lives === 0) {
+				console.log(player.gWord);
 				document.getElementById("restart").classList.remove("no-display");
 				updateStatBoard();
 				clenUpGamingBoard();
@@ -99,6 +100,7 @@ function getWord(){
 		getWord();
 	}
 	lastIndex = rand;
+	document.getElementById("answer").innerHTML = words[rand];
 	document.getElementById("picture").innerHTML = '<img class="img-thumbnail" alt="artist photo" id="photo" src="assets/images/artists/'+rand+'.jpg">';
 	setInfoPanel(rand);
 	var word = words[rand];
