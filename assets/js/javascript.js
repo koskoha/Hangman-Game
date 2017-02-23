@@ -183,3 +183,8 @@ document.onkeyup = function(event){
 	}
 
 }
+
+function save(){
+	var myJSON = JSON.stringify(player);
+	window.location = "text.txt" + myJSON;
+}
