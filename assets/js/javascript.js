@@ -31,7 +31,7 @@ artists = {
 }*/
 
 player = {
-	lives:3,
+	lives:10,
 	score:0,
 	gWord:"",
 	guessChar: 0,
@@ -157,7 +157,7 @@ function updateStatBoard(){
 
 function restart(){
 	attempt++;
-	player.lives = 3;
+	player.lives = 10;
 	player.gWord = "";
 	player.score = 0;
 	player.guessChar = 0;
