@@ -1,6 +1,6 @@
 var words = ["Elvis Presley", "Michael Jackson", "Mariah Carey", "Madonna", "Prince", "John Lennon", "Freddie Mercury", "Whitney Houston", "Bob Dylan", 
 			"James Brown", "Beyonce", "Elton John", "Bono", "Frank Sinatra", "Eminem", "David Bowie", "Lady Gaga"];
-// var words = ["red red"];
+// var words = ["red red", "blue"];
 var letters = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var info = [
 	'Was an American singer and actor. Regarded as one of the most significant cultural icons of the 20th century, he is often referred to as the "King of Rock and Roll", or simply "the King".',
@@ -31,7 +31,7 @@ artists = {
 }*/
 
 player = {
-	lives:10,
+	lives:3,
 	score:0,
 	gWord:"",
 	guessChar: 0,
@@ -71,7 +71,6 @@ function logic(key){
 		if(key !== 0){
 			player.lives--;
 			if (player.lives === 0) {
-				console.log(player.gWord);
 				document.getElementById("restart").classList.remove("no-display");
 				updateStatBoard();
 				clenUpGamingBoard();
@@ -95,11 +94,7 @@ function start(button){
 }
 
 function getWord(){
-	var rand = Math.floor((Math.random() * words.length) + 0);
-	if (rand === lastIndex) {
-		getWord();
-	}
-	lastIndex = rand;
+	var rand = getRandom();
 	document.getElementById("answer").innerHTML = words[rand];
 	document.getElementById("picture").innerHTML = '<img class="img-thumbnail" alt="artist photo" id="photo" src="assets/images/artists/'+rand+'.jpg">';
 	setInfoPanel(rand);
@@ -110,6 +105,15 @@ function getWord(){
 	}
 	printAlfabet();
 	return word;
+}
+
+function getRandom(){
+	var random = Math.floor((Math.random() * words.length) + 0);
+	while(lastIndex == random){
+		random = Math.floor((Math.random() * words.length) + 0);
+	}
+	lastIndex = random;
+	return random;
 }
 
 function setInfoPanel(index){
@@ -153,7 +157,7 @@ function updateStatBoard(){
 
 function restart(){
 	attempt++;
-	player.lives = 5;
+	player.lives = 3;
 	player.gWord = "";
 	player.score = 0;
 	player.guessChar = 0;
