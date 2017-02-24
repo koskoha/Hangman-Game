@@ -146,12 +146,13 @@ body{
 /* **************TEPOGRAPHI*************** */
 
 	#game-title {
+		margin-bottom: 20px;
 		position: relative;
 		font-size: 80px;
 		margin-top: 0;
 		font-family: 'Myriad Pro', 'Myriad', helvetica, arial, sans-serif;
-		text-shadow: 2px 3px 3px #292929;
-		letter-spacing: -7px;
+		text-shadow: 5px 6px 6px #292929;
+		letter-spacing: -5px;
 		-webkit-text-stroke: 1px white;
 	
 	}
@@ -160,7 +161,7 @@ body{
 
 	#game-title span {
 		text-decoration: none;
-		color: #ffffff;
+		color: grey;
 		position: absolute;
 
 		-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(50%, rgba(0,0,0,0)), to(rgba(0,0,0,1)));
@@ -185,7 +186,9 @@ body{
 /* ***************************** */
 @media screen and (max-width: 991px){
 	#game-title {
-		font-size: 40px;
+		font-size: 30px;
+		text-shadow: 3px 5px 5px #292929;
+		letter-spacing: -2px;
 	}
 
 	#scoreBoard{
